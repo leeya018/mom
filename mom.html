@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Axiforma,sans-serif;
+
+        }
+
+              /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.733); /* Black w/ opacity */
+
+
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.background-image { 
+    position: fixed;
+    opacity: 70%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+
+    background: url(./images/view.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        li {
+            list-style: none;
+            margin: 0 1rem ;
+            color:#1e1e9a ;
+            font-size: 2em;
+        }
+        li:hover{
+            color: #0086ff;
+        }
+
+        ul {
+            margin:0;
+            display:flex;;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .gallery{
+            padding:5em  0 0 0 ;
+             
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .image-item{
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+/*             
+            background: url(./images/bricks5.png);
+            background-repeat: no-repeat;
+            background-size: cover; */
+
+            
+        }
+
+        .image-item:hover{
+            /* border: 0.1em solid black;
+            padding: .9em; */
+        }
+
+        .name{
+            text-align: center;
+        }
+        .img1{
+            background: url(./images/1.png);
+        }
+        .img2{
+
+            background: url(./images/2.png);
+            }
+            .img3{
+
+            background: url(./images/3.png);
+            }
+            .img4{
+
+            background: url(./images/4.png);
+            }
+            .img5{
+
+            background: url(./images/5.png);
+            }
+            .img6{
+
+            background: url(./images/6.png);
+            }
+            .img7{
+
+            background: url(./images/7.png);
+            }
+            .img8{
+
+            background: url(./images/8.png);
+            }
+          .img{
+            background-repeat: no-repeat;
+            background-size: cover;
+  
+            margin: .4em;
+            padding: 0;  
+            border: 0;
+
+        }
+
+        .img-expend{
+            width: 21em;
+            height: 10em;
+        }
+
+        
+        .img-view{
+            width: 63em;
+            height: 30em;
+        }
+    .img-expend:hover {
+        animation: textgrowth 0.2s ease-in-out 0s forwards;
+    }
+
+    @keyframes textgrowth {
+    from {
+            border: 0;
+
+            margin: .4em;
+            padding: 0;
+    }
+    to {
+            padding: .4em;  
+            margin: 0;
+    }
+     
+}
+        .pay{
+            border-radius: 6px;
+            flex:1;
+            padding: 0;
+            border-color: #ff00ce;
+            color: #ff00ce;
+
+            margin: 0 0 0 1rem;;
+        }
+
+        .pay:hover{
+            background: #ff00ce;
+            color: #fff;
+
+        }
+
+        .price{
+            flex:1;
+            text-align: center;
+
+        }
+        .price:after{
+            content: '$';
+        }
+        .row1{
+            display: flex;
+            flex-direction: row;
+            height: 2.3em;
+            line-height: 2.3em;
+        }
+
+        .close{
+            background: url(./images/x.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin:.3em ;
+            width: 2em;
+            height: 2em;
+        }
+        .close:hover{
+            width: 2.3em;
+            height: 2.3em;
+            margin: 0;
+        }
+
+        h1{
+            text-align: center;
+            position: fixed;
+            padding: 1em;
+            margin: 0;
+            width: 100vw;
+            z-index: 1;
+        }
+
+        .description{
+            text-align: center;
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="background-image"></div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="close"></div>
+                <div class="img img-view"></div>
+                <div class="description">
+                   זאת תמונה ממש מיוחדת של אישה שנמצאת על ענן
+                </div>
+            </div>
+        
+            </div>
+    <div class="container">
+        <h1>הגלריה של שושנה יהב</h1>
+    
+        <div class="gallery">
+            <div class="image-item">
+                <div class="img img-expend img1"></div>
+                <div class="name">שלום עליכם </div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">
+                        pay
+                    </button>
+                </div>
+            </div>      
+           <div class="image-item">
+                <div class="img img-expend img2"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+             <div class="image-item">
+                <div class="img img-expend img3"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+                     <div class="image-item">
+                <div class="img img-expend img4"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+                     <div class="image-item">
+                <div class="img img-expend img5"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+                     <div class="image-item">
+                <div class="img img-expend img6"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>         
+            <div class="image-item">
+                <div class="img img-expend img7"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+         <div class="image-item">
+                <div class="img img-expend img8"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>      
+               <div class="image-item">
+                <div class="img img-expend img9"></div>
+                <div class="name">22</div>
+                <div class="row1">
+                    <div class="price">33</div>
+                    <button class="pay">pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".close").click(()=>{
+                $("#myModal").hide();
+
+            })  
+            $(".img-view").click((e)=>{
+                console.log("image")
+                    e.stopPropagation() // stop from bubbleing 
+
+                    // preventDefault() // dont do the action you should do by default  
+            })
+
+            $(".pay").click(()=>{
+                var win = window.open('https://www.paypal.com/us/signin', '_blank');
+            if (win) {
+                //Browser has allowed it to be opened
+                win.focus();
+            } else {
+                //Browser has blocked it
+                alert('Please allow popups for this website');
+}
+            
+            })  
+
+
+            
+
+            $("#myModal").click(()=>{
+                console.log("my modal")
+
+                $("#myModal").hide();
+
+            })
+
+            $(".img").click(function(){
+                $("#myModal").show();
+                $(".modal-content>.img").addClass("img1")
+  });
+});
+    </script>
+    
+</body>
+</html>
